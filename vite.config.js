@@ -16,13 +16,4 @@ export default defineConfig({
       plugins: [tailwindcss(), autoprefixer()],
     },
   },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://xumm.app',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
-  },
 });
