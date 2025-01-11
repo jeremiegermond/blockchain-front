@@ -80,7 +80,7 @@ export default function Home() {
 
   const connectWithXUMM = async () => {
     try {
-      const response = await axios.post('/api/v1/platform/payload', {
+      const response = await axios.post('https://xumm.app/api/v1/platform/payload', {
         txjson: { TransactionType: "SignIn" },
         options: {
           pathfinding_fallback: false,
