@@ -80,18 +80,11 @@ export default function Home() {
 
   const connectWithXUMM = async () => {
     try {
-      const response = await axios.post('https://xumm.app/api/v1/platform/payload', {
+      const response = await axios.post('/api/proxy', {
         txjson: { TransactionType: "SignIn" },
         options: {
           pathfinding_fallback: false,
           force_network: "testnet"
-        }
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-Key': API_KEY,
-          'X-API-Secret': API_SECRET,
-          'Accept': 'application/json'
         }
       });
 
